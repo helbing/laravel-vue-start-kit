@@ -5,7 +5,7 @@ namespace App\Api\V1\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Api\V1\Controllers\BaseController;
+use App\Api\BaseController;
 use Illuminate\Support\Facades\Validator;
 use Dingo\Api\Exception\StoreResourceFailedException;
 use Tymon\JWTAuth\Exceptions\JWTException;

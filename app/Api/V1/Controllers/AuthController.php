@@ -7,7 +7,7 @@ use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Validator;
-use App\Api\V1\Controllers\BaseController;
+use App\Api\BaseController;
 use App\User;
 use Dingo\Api\Exception\StoreResourceFailedException;
 

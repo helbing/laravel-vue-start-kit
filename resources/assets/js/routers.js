@@ -33,10 +33,12 @@ export default router => {
       subRoutes: {
         'login': {
           name: 'login',
+          guest: true,
           component: resolve => resolve(Login),
         },
         'register': {
           name: 'register',
+          guest: true,
           component: resolve => resolve(Register),
         },
         'profile': {
@@ -78,8 +80,13 @@ export default router => {
   });
 
   router.beforeEach(function (transition) {
-    console.log(transition.to.auth);
     let token = localStorage.getItem('jwt-token');
+    if (transition.to.auth && (!token || token === null)) {
+      transition.redirect('/auth/login');
+    }
+    if (transition.to.guest && token) {
+      transition.redirect('/auth/profile');
+    }
     transition.next();
   });
 };

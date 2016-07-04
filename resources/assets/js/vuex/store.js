@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import mutations from './mutations.js';
+import middlewares from './middlewares.js';
 
 /* register plugin */
 /* http://vuex.vuejs.org/zh-cn/ */
@@ -17,4 +18,5 @@ const state = {
 export default new Vuex.Store({
   state,
   mutations,
+  middlewares,
 });

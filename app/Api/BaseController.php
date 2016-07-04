@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Api\V1\Controllers;
+namespace App\Api;
 
 use Dingo\Api\Routing\Helpers;
 use Illuminate\Routing\Controller;
