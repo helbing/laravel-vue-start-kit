@@ -1,16 +1,7 @@
-import { INCREMENT, DECREMENT, SETNAME, LOGIN, LOGOUT, VALIDATE_ERROR } from './mutation-types.js';
+import { LOGIN, LOGOUT, VALIDATE_ERROR } from './mutation-types.js';
 
 /* eslint-disable no-param-reassign */
 export default {
-  [INCREMENT]: (state) => {
-    state.count++;
-  },
-  [DECREMENT]: (state) => {
-    state.count--;
-  },
-  [SETNAME]: (state, name) => {
-    state.name = name;
-  },
   [LOGIN]: (state, name, token) => {
     state.name = name;
     state.token = token;
